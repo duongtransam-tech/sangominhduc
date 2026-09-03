@@ -101,21 +101,6 @@ document.documentElement.classList.add("js");
     });
   }
 
-  /* ---- Click-to-load Google Map ---- */
-  var mapLoad = document.getElementById("mapLoad");
-  var mapBox = document.getElementById("mapBox");
-  if (mapLoad && mapBox) {
-    mapLoad.addEventListener("click", function () {
-      var f = document.createElement("iframe");
-      f.title = "Bản đồ showroom Sàn gỗ Minh Đức";
-      f.src = mapBox.getAttribute("data-src");
-      f.loading = "lazy";
-      f.referrerPolicy = "no-referrer-when-downgrade";
-      mapBox.innerHTML = "";
-      mapBox.appendChild(f);
-    });
-  }
-
   /* ---- Footer year ---- */
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
